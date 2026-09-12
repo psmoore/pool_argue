@@ -1,0 +1,292 @@
+<!doctype html>
+<!--
+  UNOFFICIAL PREVIEW. Not a City of Los Angeles website.
+  A replica of the John C. Argue Swim Stadium facility page with the "Hours of Operation"
+  block replaced by a live Pool Relay calendar holding the same published hours.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>John C. Argue Swim Stadium &mdash; hours (Pool Relay preview)</title>
+<meta name="description" content="Unofficial preview of the John C. Argue Swim Stadium page with a live Pool Relay calendar in place of the typed hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rust:   #d14c29;   /* the department band, headings and buttons */
+    --rust-d: #9d391f;   /* link text */
+    --navy:   #10232a;   /* the city bar */
+    --teal:   #00808c;   /* the Citywide Aquatics card header */
+    --purple: #615898;   /* the Facility Category card header */
+    --cream:  #f8f1e8;   /* page background */
+    --ink:    #212529;
+    --rule:   #e3d9cc;
+    --muted:  #6c6357;
+  }
+  *{ box-sizing:border-box }
+  html,body{ margin:0 }
+  body{ font:16px/1.6 Lato, system-ui, sans-serif; color:var(--ink); background:var(--cream) }
+  a{ color:var(--rust-d) }
+
+  .preview-note{
+    background:#1b1b1b; color:#fff; font-size:14px; line-height:1.5;
+    padding:9px 18px; text-align:center;
+  }
+  .preview-note b{ color:#f0a58a; font-weight:700 }
+  .preview-note a{ color:#fff }
+
+  .citybar{
+    background:var(--navy); color:#fff; font-size:13px;
+    padding:7px 20px; display:flex; align-items:center; gap:10px;
+  }
+  .citybar .seal{
+    width:18px; height:18px; border-radius:50%; background:#c9c2b6; flex:none;
+  }
+  .citybar .right{ margin-left:auto; display:flex; gap:8px }
+  .citybar .right span{
+    border:1px solid rgba(255,255,255,.55); border-radius:3px; padding:3px 9px; font-size:12px;
+  }
+
+  .deptband{
+    background:var(--rust); color:#fff; text-align:center;
+    padding:9px 20px; font-size:15.5px;
+  }
+
+  header.site{ background:#fff; padding:14px 20px 0 }
+  .hdr-top{ display:flex; align-items:center; gap:12px; max-width:1180px; margin:0 auto 12px }
+  .hdr-top .pill{
+    background:#1f4b5a; color:#fff; border-radius:4px; padding:6px 13px; font-size:13.5px;
+  }
+  .hdr-top .right{ margin-left:auto; display:flex; gap:22px; font-size:14px; color:var(--rust-d) }
+  .hdr-nav{ display:flex; align-items:center; gap:26px; max-width:1180px; margin:0 auto; padding-bottom:14px; flex-wrap:wrap }
+  .hdr-nav img.logo{ height:44px; width:auto }
+  .hdr-nav span.link{ font-size:15.5px; color:var(--ink) }
+  .hdr-nav .search{
+    margin-left:auto; border:1px solid #cfc7bb; border-radius:5px;
+    padding:7px 14px; min-width:170px; color:#9a938a; font-size:14px;
+  }
+  .hdr-nav .login{ background:var(--rust); color:#fff; border-radius:5px; padding:7px 18px; font-size:15px }
+  /* The striped rule the site puts under its header. */
+  .stripes{ height:7px; background:linear-gradient(90deg,#e8733f 0 22%, #d14c29 22% 55%, #f0a26e 55% 78%, #d14c29 78% 100%) }
+
+  .wrap{ max-width:1180px; margin:0 auto; padding:22px 20px 40px }
+  .back{ color:var(--rust-d); font-size:15px; margin-bottom:16px; display:inline-block }
+  .cols{ display:grid; grid-template-columns:250px 1fr; gap:22px; align-items:start }
+
+  .card{ background:#fff; border:1px solid var(--rule); border-radius:4px; overflow:hidden; margin-bottom:18px }
+  .card-header{ color:#fff; padding:9px 14px; font-size:15px }
+  .card-header.aq{ background:var(--teal) }
+  .card-header.cat{ background:var(--purple) }
+  .card ul{ margin:0; padding:12px 14px 14px 14px; list-style:none }
+  .card li{ color:var(--rust-d); font-size:14.5px; padding:3px 0 }
+
+  .sheet{ background:#fff; border:1px solid var(--rule); border-radius:4px; padding:22px 24px 26px }
+  h1{ font-size:27px; line-height:1.25; color:var(--rust); text-transform:uppercase; margin:0 0 18px; font-weight:900 }
+  .facts{ display:grid; grid-template-columns:1fr 1fr; gap:18px 26px; margin-bottom:8px }
+  .facts img.photo{ width:100%; height:auto; border-radius:3px; grid-row:span 6 }
+  .facts dt{ font-weight:700; font-size:15.5px }
+  .facts dd{ margin:0 0 10px; font-size:15px }
+
+  h2{ font-size:19px; color:var(--rust-d); margin:26px 0 10px }
+  .hr{ border:0; border-top:1px solid var(--rule); margin:24px 0 }
+
+  .cal-head{ display:flex; align-items:baseline; gap:11px; flex-wrap:wrap; margin:0 0 11px }
+  .cal-head h2{ margin:0 }
+  .cal-head .live{
+    font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+    color:#fff; background:var(--teal); padding:4px 10px; border-radius:3px;
+  }
+  .frame{ border:1px solid var(--rule); border-radius:4px; overflow:hidden; background:#fff;
+          box-shadow:0 8px 22px rgba(60,40,25,.12) }
+  .frame iframe{ display:block; width:100%; height:700px; border:0 }
+  @media (max-width:760px){ .frame iframe{ height:560px } }
+  .cal-foot{ font-size:14.5px; color:var(--muted); margin:10px 0 0 }
+
+  .finding{
+    margin:22px 0 0; padding:16px 18px; border-left:4px solid var(--rust);
+    background:#fdf0ea; font-size:15px;
+  }
+  .finding b{ color:var(--rust-d) }
+  .finding ul{ margin:9px 0 0; padding-left:20px }
+  .finding li{ margin-bottom:6px }
+
+  .replaces{ margin-top:22px; background:#fffaf4; border:1px solid var(--rule); border-radius:4px; padding:18px 20px }
+  .replaces h2{ margin-top:0 }
+  .replaces ul{ margin:0; padding-left:20px; font-size:15px; color:#4a443c }
+  .replaces li{ margin-bottom:10px }
+
+  footer.site{ background:var(--navy); color:#fff; padding:24px 20px; font-size:14px; margin-top:32px }
+  footer.site .in{ max-width:1180px; margin:0 auto }
+  footer.site a{ color:#fff }
+  footer.site .fine{
+    max-width:1180px; margin:16px auto 0; padding-top:13px;
+    border-top:1px solid rgba(255,255,255,.25); font-size:12.5px; color:#bcc7cb;
+  }
+  @media (max-width:860px){
+    .cols{ grid-template-columns:1fr }
+    .facts{ grid-template-columns:1fr }
+    .facts img.photo{ grid-row:auto }
+    .citybar .right, .hdr-top .right{ display:none }
+  }
+</style>
+</head>
+<body>
+
+<div class="preview-note">
+  <b>Unofficial preview.</b> Not a City of Los Angeles page &mdash; a mock-up of the
+  <a href="https://recreation.parks.lacity.gov/aquatic/year-round/john-c-argue-swim-stadium">John C. Argue Swim Stadium</a>
+  facility page with its typed hours replaced by a live calendar.
+</div>
+
+<div class="citybar">
+  <span class="seal" aria-hidden="true"></span>
+  An Official Website of the City of Los Angeles
+  <span class="right"><span>City Services</span><span>City Directory</span></span>
+</div>
+
+<div class="deptband">City of Los Angeles Department of Recreation and Parks</div>
+
+<header class="site">
+  <div class="hdr-top">
+    <span class="pill">Select Language</span>
+    <span class="pill">Accessibility Menu</span>
+    <span class="right"><span>No wrong DOOR</span><span>Virtual Recreation Resources</span></span>
+  </div>
+  <div class="hdr-nav">
+    <img class="logo" src="https://recreation.parks.lacity.gov/sites/default/files/logo_large.png" alt="LA Recreation and Parks">
+    <span class="link">Home</span>
+    <span class="link">Activity Registration</span>
+    <span class="link">Facilities</span>
+    <span class="link">Events</span>
+    <span class="link">Services</span>
+    <span class="link">About Us</span>
+    <span class="search">Search</span>
+    <span class="login">Login</span>
+  </div>
+</header>
+<div class="stripes"></div>
+
+<div class="wrap">
+  <span class="back">&lsaquo; Back</span>
+
+  <div class="cols">
+
+    <aside>
+      <div class="card">
+        <div class="card-header aq">Citywide Aquatics</div>
+        <ul>
+          <li>Aquatic Home Page</li><li>Aquatics Facility Use Permit Page</li>
+          <li>Pool Rules / Slide Rules / Water Watcher program</li>
+          <li>Aquatic Program Information</li><li>Year-Round Pools</li>
+          <li>Summer Pools</li><li>Camps With Pools</li>
+          <li>Learn to Swim Program</li><li>City Swimming Pool Report</li>
+          <li>Current Pool Status</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header cat">Facility Category</div>
+        <ul>
+          <li>Swimming Pools</li><li>Beaches &amp; Lakes</li><li>Campgrounds</li>
+          <li>Day Camps</li><li>Dog Parks</li><li>Golf</li><li>Parks</li>
+          <li>Recreation Centers</li><li>Skate Parks</li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="sheet">
+      <h1>Expo Center &mdash; LA84 Foundation / John C. Argue Swim Stadium</h1>
+
+      <div class="facts">
+        <img class="photo"
+             src="https://recreation.parks.lacity.gov/sites/default/files/styles/facility_large/public/facility/expo-center-la84-foundation/john-c-argue-swim-stadium/images/image000002.JPG?itok=337S-zfp"
+             alt="The Swim Stadium">
+        <dl style="margin:0">
+          <dt>Address</dt><dd>3980 Bill Robertson Lane, Los Angeles, CA 90037</dd>
+          <dt>Region</dt><dd>EXPO &middot; Council District 9 &middot; South Los Angeles</dd>
+          <dt>Phone</dt><dd>(213) 763-0125</dd>
+          <dt>Email</dt><dd>EXPO.Pool@lacity.org</dd>
+          <dt>Facility</dt><dd>Year Round Pool (Outdoor / Heated)</dd>
+        </dl>
+      </div>
+
+      <hr class="hr">
+
+      <div class="cal-head">
+        <h2>Hours of Operation</h2>
+        <span class="live">Live</span>
+      </div>
+      <p style="margin:0 0 12px;font-size:15px">This holds the hours this page publishes, to
+        the minute. <strong>It opens empty, because the only hours published here ran to
+        8&nbsp;August.</strong> Press the back arrow twice, to July, and the pool fills up.</p>
+      <div class="frame">
+        <iframe src="https://www.poolrelay.com/embed/ckGEZB2KZdC4sIGDvXGXxw"
+                title="John C. Argue Swim Stadium schedule"></iframe>
+      </div>
+      <p class="cal-foot">Once there are sessions on screen, tap <strong>Lap Swim</strong> or
+        <strong>Rec Swim</strong> in the filter to see one of them on its own.</p>
+
+      <div class="finding">
+        <b>It opens empty, and that is not a fault in the calendar.</b>
+        The only hours published for this pool are headed
+        &ldquo;Summer Operational Hours: June 14, 2026 &mdash; August 8, 2026&rdquo;. That
+        season ended, so a month after it there is nothing to draw.
+        <strong>Press the back arrow twice, to July, and the pool fills up</strong> &mdash;
+        every lap swim and rec swim session, exactly as the page lists them.
+        <ul>
+          <li>The pool is <strong>year-round</strong>, and the city's own Year-Round Pools
+            list shows it <strong>OPEN, HEATED</strong> today.</li>
+          <li>The Citywide Aquatics page says year-round hours &ldquo;vary per facility&rdquo;
+            and to see the year-round list for detail. That list carries statuses and
+            addresses, and no hours at all.</li>
+          <li>So a swimmer who wants to know when they can swim this week has nowhere on the
+            site to find out. That is the gap, and it is the only thing here worth fixing.</li>
+        </ul>
+      </div>
+
+      <hr class="hr">
+
+      <h2>Pool status</h2>
+      <p>Expo Family Pool is open for lap and recreational swimming. Expo Competition Pool
+        remains closed for maintenance. Both are in the calendar above; the Competition Pool
+        holds no sessions, which is what closed looks like.</p>
+    </main>
+  </div>
+
+  <div class="replaces">
+    <h2>What this replaces</h2>
+    <ul>
+      <li><strong>A season that has to be retyped to end.</strong> The hours are headed with a
+        date range, so when the range passes somebody has to go in and replace the block. Until
+        they do, the page confidently publishes hours that stopped over a month ago. A calendar
+        holds the end date itself and simply stops.</li>
+      <li><strong>Two answers to the same question.</strong> The holiday list says December 31
+        is closed. The Holiday Half Days list says December 31 is open 1pm&ndash;5pm. Only one
+        of those can be true, and a calendar can only hold one of them.</li>
+      <li><strong>&ldquo;MLKD/Juneteenth (January 19)&rdquo;.</strong> Two different holidays,
+        six months apart, on one line with one date.</li>
+      <li><strong>A link called City Swimming Pool Report</strong> that opens a report from
+        2004. Nothing on the page says how old any of it is; a dated calendar always does.</li>
+      <li><strong>Hours typed once per pool, on 26 year-round pages.</strong> Every one of them
+        ages the same way, and each has to be found and edited by hand.</li>
+    </ul>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="in">
+    <strong>Expo Center &mdash; LA84 Foundation / John C. Argue Swim Stadium</strong><br>
+    3980 Bill Robertson Lane, Los Angeles, CA 90037 &middot; (213) 763-0125 &middot; EXPO.Pool@lacity.org<br>
+    Citywide Aquatics &middot; 3900 Chevy Chase Dr, Los Angeles, CA 90039 &middot; (323) 906-7953
+  </div>
+  <p class="fine">This page is an unofficial preview built to demonstrate an embedded
+    <a href="https://www.poolrelay.com">Pool Relay</a> calendar. It is not operated by or
+    affiliated with the City of Los Angeles, its Department of Recreation and Parks, or the
+    LA84 Foundation. For official hours, fees and closures see
+    <a href="https://recreation.parks.lacity.gov/aquatic/year-round/john-c-argue-swim-stadium">recreation.parks.lacity.gov</a>.</p>
+</footer>
+
+</body>
+</html>
