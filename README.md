@@ -11,45 +11,44 @@ top — a disclaimer only in the source is one nobody opening the page can see.
 
 ## Read this before showing it to anyone
 
-**The calendar opens empty, on purpose.** This pool is different from the other replicas, and
-the difference is the whole point.
-
-The only hours published anywhere for it are headed *"Summer Operational Hours: June 14, 2026
-— August 8, 2026"*. That season has ended. The pool is year-round, the city's own Year-Round
-Pools list shows it **OPEN, HEATED** today, and no current hours are published on the facility
-page, on the year-round list, or in the Summer 2026 brochure. The Citywide Aquatics page says
-year-round hours "vary per facility" and points at the year-round list; that list carries
-statuses and addresses and no hours.
-
-So the calendar is empty for the current month because that is exactly what the site tells a
-swimmer today. **Press the month arrow back twice, to July 2026, and it fills up** with every
-session the page lists.
-
-Nothing has been invented. If the facility sends its fall hours, this page is current the same
-day.
+**The fall hours went up late, and the calendar now has them.** When this replica was built on
+11 September 2026, the only hours published for the pool were headed *"Summer Operational Hours:
+June 14, 2026 — August 8, 2026"*, three days into a fall season that starts September 8. The
+calendar opened empty for weeks, because that was exactly what the site told a swimmer. The fall
+hours appeared later and were entered on **29 September 2026**. Page back to July and the summer
+is still there as it ran.
 
 ## The schedule that is in it
 
-Modeled from the facility page on **11 September 2026**, as six standing series dated
-14 June – 8 August 2026, all on the Family Pool:
+**Fall 2026** (September 8 – November 12), on the Family Pool's 5 lanes (40 m, D-shaped; lane
+count from places2swim.com):
 
-| Session | Days | Time |
-|---|---|---|
-| Lap Swim | Monday | 7:00–9:00 am |
-| Lap Swim | Tuesday–Friday | 6:00–9:00 am |
-| Lap Swim (evening) | Mon, Wed, Fri | 7:30–8:30 pm |
-| Lap Swim | Sat, Sun | 12:00–1:00 pm |
-| Rec Swim | Monday–Friday | 1:00–4:00 pm |
-| Rec Swim | Sat, Sun | 1:00–4:30 pm |
+| Session | Days | Time | Lanes |
+|---|---|---|---|
+| Lap Swim | Monday–Friday | 7:00 am–1:00 pm | 1–5 |
+| Lap Swim ("limited lanes") | Monday–Friday | 1:00–4:00 pm | 1–2 |
+| Rec Swim | Monday–Friday | 1:00–4:00 pm | 3–5 |
+| Rec Swim | Monday–Friday | 4:00–5:00 pm | 1–5 |
+| Lap Swim (evening, "limited lanes") | Monday–Friday | 7:30–8:30 pm | 1–2 |
+| Lap Swim ("limited lanes") | Saturday | 1:00–4:30 pm | 1–2 |
+| Rec Swim | Saturday | 1:00–4:30 pm | 3–5 |
 
-**No lane allocation is published, so none is invented.** Every session sits on the Family Pool
-as a whole. The Competition Pool exists in the model with no sessions, because the page says it
-"remains closed for maintenance".
+**The lane split is our estimate.** The page says "limited lanes" and never how many; 2 of 5 is
+written into each session's description as an estimate. It also doesn't say lap swim has every
+lane before 1pm; that is our reading of "limited lanes until 4:00 p.m." while Rec Swim runs.
 
+**Closed for maintenance, November 13 – December 25**, as one all-day booking on the whole
+facility. The page gives the fall hours as "September 8 – November 13" and the closure as
+"November 13 – December 25"; the calendar treats the 13th as closed.
+
+**Summer 2026** (June 14 – August 8) stays as it was modeled: six series on the Family Pool as a
+whole, from before its lanes were added.
+
+The Competition Pool has no sessions, because the page says it "remains closed for maintenance".
 The holiday closures the page lists (December 24, 25, 31, January 1, and "MLKD/Juneteenth
-(January 19)") are **not** in the calendar. They fall outside the only season the page gives
-hours for, and the page contradicts itself on December 31, listing it as closed and also as a
-half day open 1pm–5pm. Picking one silently would be inventing an answer.
+(January 19)") are not modeled separately. December 24 and 25 fall inside the maintenance
+closure, and no hours are published after it. The page also contradicts itself on December 31,
+listing it as closed and as a half day open 1pm–5pm.
 
 ## Notes
 
